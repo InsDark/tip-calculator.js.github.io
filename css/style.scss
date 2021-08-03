@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #86BBD8;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@mixin inputStyle {
+    width: 100%;
+    border: 1px solid #CED4DA;
+    height: 3rem;
+    font-size: 1.3rem;
+    padding: 0 .5rem 0 .5rem;
+    color: #336699;
+    &:hover{
+        box-shadow: 1px 1px 10px rgb(0, 89, 255);
+    }
+}
+
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    .tipCalculator{
+        width: auto;
+        background-color: white;
+        border-radius: 10px;
+        h1{
+            padding: 1rem;
+            background-color: #336699;
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+        #tipCalculator{
+            padding: 1rem;
+            margin: 0 2rem;
+            font-size: 2rem;
+            div{
+                label{
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+                div{
+                    margin: 1rem 0;
+                    display: flex;
+                    i{
+                        font-size: 1rem;
+                        background-color: #336699;
+                        color: white;
+                        padding: 1rem;
+                        margin: 0;
+                        border-radius: 3px;
+                    }
+                    input{
+                        @include inputStyle;
+                    }
+                    select{
+                        @include inputStyle;
+                    }
+                }
+            }
+        }
+        button{
+            background-color: #336699;
+            border: none;
+            color: white;
+            width: 100%;
+            padding: .5rem 1rem;
+            font-size: 1.3rem;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover{
+                background-color: #315b85;
+            }
+        }
+    }
+    .tipAmount{
+        display: none;
+        h2{
+            text-align: center;
+        }
+    }
+}

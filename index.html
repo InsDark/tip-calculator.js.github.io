@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b8ffa0db99.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <div class="app">
+        <div class="tipCalculator">
+            <h1>TIP CALCULATOR</h1>
+            <form type="submit" id="tipCalculator">
+                <div class="bill">
+                    <label for="">How Much Was Your Bill ?</label>
+                    <div class="getBill">
+                        <i class="fa fa-dollar"></i>
+                        <input type="number" required step=".01" class="billGetter">
+                    </div>
+                </div>
+                <div class="persons">
+                    <label for="">How Many People Sharing The Bill ?</label>
+                    <div class="getPersons">
+                        <i class="fa fa-user"></i>
+                        <input type="number" required step="1" class="peopleGetter">
+                    </div>
+                </div>
+                <div class="service">
+                    <label for="">How Was Your Service</label>
+                    <div>
+                        <select class="getService">
+                            <option select value="0">Choose...</option>
+                            <option select value="1">Great - 20%</option>
+                            <option select value="2">Good - 10%</option>
+                            <option select value="3">Bad - 2%</option>
+                        </select>
+                    </div>
+                </div>
+                <button type='submit' class="btn-calculator">Calculate</button>
+            </form>
+            <div class="tipAmount">
+                <h2>Tip Amount $ 1.20</h2>
+                <h2>Total Amount $ 13.20</h2>
+                <h2>Each Person Owes $ 1.10</h2>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
